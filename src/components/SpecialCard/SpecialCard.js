@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { MDBCard, MDBCardTitle, MDBCardText, MDBCardBody } from "mdbreact";
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
-import {API_QUERY} from '../../constants/apiConstants';
+import {SPECIALS_HAPPYHOURS_API, BAR_API} from '../../constants/apiConstants';
 
 function SpecialCard(props) {
-    const urlRestaurant = `${API_QUERY}restaurants/` // change to chrisurl/businesses/
-    const urlHappyHours = `${API_QUERY}restaurants/happy_hours/`
+    const urlRestaurant = `${BAR_API}` // change to chrisurl/businesses/
+    const urlHappyHours = `${SPECIALS_HAPPYHOURS_API}restaurants/happy_hours/`
     const [isLoading, setIsLoading] = useState(true)
     const [title, setTitle] = useState()
     const [deal, setDeal] = useState()
@@ -15,6 +15,7 @@ function SpecialCard(props) {
     const [happyHourEnd, setHappyHourEnd] = useState()
 
     const getRestaurantData = async (id) => {
+        console.log(urlRestaurant)
         setIsLoading(true)
         const res = await fetch(urlRestaurant + id)
         const data = await res.json()

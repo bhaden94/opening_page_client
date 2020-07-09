@@ -3,10 +3,10 @@ import { MDBRow, MDBCol, MDBContainer } from "mdbreact";
 import SpecialCard from '../SpecialCard/SpecialCard';
 import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 import './Specials.css';
-import {API_QUERY} from '../../constants/apiConstants';
+import {SPECIALS_HAPPYHOURS_API} from '../../constants/apiConstants';
 
 function Specials() {
-    const url = `${API_QUERY}bar_specials/`
+    const url = `${SPECIALS_HAPPYHOURS_API}bar_specials/`
     const [barSpecials, setBarSpecials] = useState([])
     const [isLoading, setIsLoading] = useState(true);
     
@@ -14,7 +14,6 @@ function Specials() {
         const fetchData = async () => {
             const res = await fetch(url)
             const data = await res.json()
-            console.log(data)
             setBarSpecials(data)
             setIsLoading(false)
         }
