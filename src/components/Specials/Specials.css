@@ -1,0 +1,28 @@
+.special-header {
+    color: #fff;
+    margin: 25px 0;
+    text-decoration: underline;
+}
+
+.card-text {
+  text-align: left;
+  margin-top: 10px;
+}
+
+.special-title {
+  text-align: center;
+  color: #747373;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+#bigger {
+  font-size: 1rem;
+}
+
+@media only screen and (max-width: 768px) {
+    .card {
+      margin-top: 5px;
+      margin-bottom: 15px;
+    }
+  }

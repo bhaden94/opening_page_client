@@ -1,0 +1,15 @@
+html ,body {
+  height: 100vh;
+  background-color: #3E4551;
+}
+
+.App {
+  text-align: center;
+}
+
+.hv-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
