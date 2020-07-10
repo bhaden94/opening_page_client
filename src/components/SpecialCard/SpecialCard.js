@@ -15,11 +15,10 @@ function SpecialCard(props) {
     const [happyHourEnd, setHappyHourEnd] = useState()
 
     const getRestaurantData = async (id) => {
-        console.log(urlRestaurant)
         setIsLoading(true)
         const res = await fetch(urlRestaurant + id)
         const data = await res.json()
-        setRestaurant(data.name)
+        setRestaurant(data[0].name)
         setIsLoading(false)
     }
 
