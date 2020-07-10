@@ -56,12 +56,12 @@ function SpecialCard(props) {
         {isLoading ? (<div><LoadingSpinner color="text-primary" /></div>) : 
             <MDBCardBody>
                 <MDBCardTitle tag="h5">
-                    <a href="#!" target="_blank">{restaurant}</a>
+                    <a href={`https://beercrawlfrontapp.herokuapp.com/businesses/${props.deal.restaurant_id}`} target="_blank">{restaurant}</a>
                     <p id="bigger" className="card-text">
                         Happy Hours:
                         {hasHappyHours ? 
-                            (` ${happyHourBegin} - ${happyHourEnd}`): 
-                            " No Happy Hours"}
+                        (` ${happyHourBegin} - ${happyHourEnd}`): 
+                        " No Happy Hours"}
                     </p>
                 </MDBCardTitle>
                     <hr />

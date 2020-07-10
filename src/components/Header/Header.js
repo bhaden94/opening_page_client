@@ -58,12 +58,16 @@ function Header(props) {
   }
 
   const redirectToRegister = () => {
-    props.history.push('/register'); 
+    props.history.push('/'); 
   }
 
-  // const redirectToLogin = () => {
-  //   props.history.push('/login'); 
-  // }
+  const redirectToMap = () => {
+    window.open("https://routefront.herokuapp.com/")
+  }
+
+  const redirectToBars = () => {
+    window.open("https://beercrawlfrontapp.herokuapp.com/")
+  }
   
   return (
     <header>
@@ -83,10 +87,10 @@ function Header(props) {
             <MDBNavItem onClick={() => redirectToHome()} active>
               <MDBNavLink to="#!">Home</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
+            <MDBNavItem onClick={() => redirectToMap()}>
               <MDBNavLink to="#!">Map</MDBNavLink>
             </MDBNavItem>
-            <MDBNavItem>
+            <MDBNavItem onClick={() => redirectToBars()}>
               <MDBNavLink to="#!">Bars</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>

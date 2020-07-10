@@ -14,7 +14,7 @@ function DrinkNow(props) {
         <MDBContainer>
             <MDBAnimation type="flipInX">
                 <MDBInput label="City" valueDefault={options[0].label} background />
-                <MDBBtn className="form-item" size="lg" gradient="blue">Drink Now!</MDBBtn>
+                <MDBBtn href="https://routefront.herokuapp.com/" className="form-item" size="lg" gradient="blue">Drink Now!</MDBBtn>
             </MDBAnimation>
         </MDBContainer>
     )
