@@ -68,6 +68,10 @@ function Header(props) {
   const redirectToBars = () => {
     window.open("https://beercrawlfrontapp.herokuapp.com/")
   }
+
+  const redirectToDashboard = () => {
+    window.open("https://drinknavdashboardv3frontend.herokuapp.com/")
+  }
   
   return (
     <header>
@@ -92,6 +96,9 @@ function Header(props) {
             </MDBNavItem>
             <MDBNavItem onClick={() => redirectToBars()}>
               <MDBNavLink to="#!">Bars</MDBNavLink>
+            </MDBNavItem>
+            <MDBNavItem onClick={() => redirectToDashboard()}>
+              <MDBNavLink to="#!">Dashboard</MDBNavLink>
             </MDBNavItem>
           </MDBNavbarNav>
           <MDBNavbarNav right>
